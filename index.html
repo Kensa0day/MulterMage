@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Upload with Multer</title>
+  </head>
+  <body>  <!-- Single File -->
+    <h1>To Upload Single FIle</h1>
+    <form action="/uploadfile" enctype="multipart/form-data" method="POST">
+      <input type="file" name="myFile" />
+      <input type="submit" value="Upload a file" />
+    </form>
+    
+    <!-- Multiple files -->
+    <h1>Multiple File</h1>
+    <form action="/uploadmultiple" enctype="multipart/form-data" method="POST">
+      Select images: <input type="file" name="myFiles" multiple />
+      <input type="submit" value="Upload files"/>
+    </form>
+
+    <!--Upload Ke Database-->
+    <h1>to Database</h1>
+    <form action="/uploadphoto" enctype="multipart/form-data" method="POST">
+        <input type="file" name="picture" accept="image/*" />
+        <input type="submit" value="Upload Photo" />
+  </form>
+  </body>
+</html>
